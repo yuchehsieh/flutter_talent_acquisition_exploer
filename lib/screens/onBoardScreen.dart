@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talent_acquisition_exploer/screens/drawer.dart';
+import 'package:talent_acquisition_exploer/screens/Drawer.dart';
 
 class OnBoardScreen extends StatelessWidget {
   @override

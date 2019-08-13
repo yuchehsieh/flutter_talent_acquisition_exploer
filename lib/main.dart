@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talent_acquisition_exploer/screens/onBoardScreen.dart';
-import 'package:talent_acquisition_exploer/screens/siteApplet.dart';
+import 'package:talent_acquisition_exploer/screens/SiteApplet.dart';
 
 void main() => runApp(MyApp());
 

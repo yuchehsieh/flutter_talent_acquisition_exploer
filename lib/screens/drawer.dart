@@ -163,6 +163,8 @@ class _DrawerBlockState extends State<DrawerBlock>
     final bool isExpanded = widget.expandedState == ExpandedState.Expanded &&
         widget.blockIndex == widget.currentExpandedIndex;
 
+    print(_calVerticalNum());
+
     return Card(
       child: Column(
         children: <Widget>[
@@ -185,17 +187,21 @@ class _DrawerBlockState extends State<DrawerBlock>
             decoration: isExpanded
                 ? BoxDecoration(
                     border: Border.all(
-                      width: 0.1,
+                      width: 0.5,
                       color: Colors.black87,
                     ),
                   )
                 : null,
           ),
           AnimatedContainer(
-            height: isExpanded ? _calVerticalNum() * 115 : 0,
+            height: isExpanded
+                ? _calVerticalNum() == 1.0
+                    ? _calVerticalNum() * 110 + 10
+                    : _calVerticalNum() * 110
+                : 0,
             duration: Duration(milliseconds: 300),
             child: GridView(
-              padding: EdgeInsets.only(top: 10, bottom: 0),
+              padding: EdgeInsets.only(top: 10),
               // shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
@@ -207,7 +213,7 @@ class _DrawerBlockState extends State<DrawerBlock>
                 return BlockItems(applet);
               }).toList(),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -59,23 +59,54 @@ final List<Applet> authorizationApplets = [
 final List<Applet> settingApplets = [
   Applet(
     text: 'Questionnaire',
-    image: 'assets/images/earth-globe.svg',
-    uri: 'image/survey.svg',
+    image: 'assets/images/survey.svg',
+    uri: 'applet/EvaluationFormApplet',
   ),
   Applet(
     text: 'Job Category',
-    image: 'assets/images/earth-globe.svg',
+    image: 'assets/images/skills.svg',
     uri: 'applet/JobCategoryApplet',
   ),
   Applet(
     text: 'Resume Sources',
-    image: 'assets/images/earth-globe.svg',
+    image: 'assets/images/portfolio.svg',
     uri: 'applet/ResumeSourceApplet',
   ),
   Applet(
     text: 'Work Location',
-    image: 'assets/images/earth-globe.svg',
+    image: 'assets/images/work.svg',
     uri: 'applet/WorkLocationApplet',
+  ),
+  Applet(
+    text: 'Alias',
+    image: 'assets/images/connector.svg',
+    uri: 'applet/AliasApplet',
+  ),
+  Applet(
+    text: 'Auto Match',
+    image: 'assets/images/transfer.svg',
+    uri: 'applet/AutoMatchApplet',
+  ),
+  Applet(
+    text: 'Meeting Room',
+    image: 'assets/images/meeting-room.svg',
+    uri: 'applet/MeetingRoomApplet',
+  ),
+  Applet(
+    text: 'Code Data',
+    image: 'assets/images/subject.svg',
+    uri: 'applet/CodeDataApplet',
+  ),
+  Applet(
+    text: 'Mail Management',
+    icon: Icons.contact_mail,
+    image: 'assets/images/connector.svg',
+    uri: 'applet/MailManagementApplet',
+  ),
+  Applet(
+    text: 'Education',
+    image: 'assets/images/student.svg',
+    uri: 'applet/EducationApplet',
   ),
 ];
 
