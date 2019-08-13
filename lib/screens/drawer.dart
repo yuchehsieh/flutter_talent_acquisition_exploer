@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:talent_acquisition_exploer/models/applet.dart';
 import '../public/data/applets.dart';
 
@@ -159,6 +160,9 @@ class _DrawerBlockState extends State<DrawerBlock>
 
   @override
   Widget build(BuildContext context) {
+    final bool isExpanded = widget.expandedState == ExpandedState.Expanded &&
+        widget.blockIndex == widget.currentExpandedIndex;
+
     return Card(
       child: Column(
         children: <Widget>[
@@ -175,10 +179,20 @@ class _DrawerBlockState extends State<DrawerBlock>
             onTap: widget.onBlockPressed,
           ),
           AnimatedContainer(
-            height: widget.expandedState == ExpandedState.Expanded &&
-                    widget.blockIndex == widget.currentExpandedIndex
-                ? _calVerticalNum() * 115
-                : 0,
+            duration: Duration(milliseconds: 300),
+            width: isExpanded ? 300 : 0,
+            height: isExpanded ? 0.3 : 0,
+            decoration: isExpanded
+                ? BoxDecoration(
+                    border: Border.all(
+                      width: 0.1,
+                      color: Colors.black87,
+                    ),
+                  )
+                : null,
+          ),
+          AnimatedContainer(
+            height: isExpanded ? _calVerticalNum() * 115 : 0,
             duration: Duration(milliseconds: 300),
             child: GridView(
               padding: EdgeInsets.only(top: 10, bottom: 0),
@@ -202,19 +216,44 @@ class _DrawerBlockState extends State<DrawerBlock>
 
 class BlockItems extends StatelessWidget {
   final Applet applet;
-
   BlockItems(this.applet);
+
+  void onTapHandler(BuildContext context) {
+    Navigator.of(context).pushReplacementNamed(applet.uri);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
-      height: 50,
-      child: Center(
-        child: Text(
-          applet.text,
-          textAlign: TextAlign.center,
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          applet.icon != null
+              ? Center(
+                  child: IconButton(
+                    icon: Icon(
+                      applet.icon,
+                      size: 44,
+                    ),
+                    padding: EdgeInsets.all(0),
+                    onPressed: () => onTapHandler(context),
+                  ),
+                )
+              : GestureDetector(
+                  onTap: () => onTapHandler(context),
+                  child: SvgPicture.asset(
+                    applet.image,
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: 50,
+                  ),
+                ),
+          SizedBox(height: 5),
+          Text(
+            applet.text,
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
       decoration: BoxDecoration(border: Border.all()),
     );

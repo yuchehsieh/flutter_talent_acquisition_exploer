@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talent_acquisition_exploer/screens/onBoardScreen.dart';
+import 'package:talent_acquisition_exploer/screens/siteApplet.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: OnBoardScreen(),
+      routes: {
+        SiteApplet.routeName: (_) => SiteApplet(),
+      },
     );
   }
 }

@@ -4,17 +4,18 @@ import 'package:talent_acquisition_exploer/models/applet.dart';
 final List<Applet> authorizationApplets = [
   Applet(
     text: 'Site',
-    image: 'image/earth-globe.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/SiteApplet',
   ),
   Applet(
     text: 'Role',
-    image: 'image/earth-globe.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/RoleApplet',
+    icon: Icons.person,
   ),
   Applet(
     text: 'Account',
-    image: 'image/teamwork.svg',
+    image: 'assets/images/teamwork.svg',
     uri: 'applet/AccountApplet',
   ),
   // {
@@ -58,22 +59,22 @@ final List<Applet> authorizationApplets = [
 final List<Applet> settingApplets = [
   Applet(
     text: 'Questionnaire',
-    image: 'image/survey.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'image/survey.svg',
   ),
   Applet(
     text: 'Job Category',
-    image: 'image/skills.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/JobCategoryApplet',
   ),
   Applet(
     text: 'Resume Sources',
-    image: 'image/portfolio.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/ResumeSourceApplet',
   ),
   Applet(
     text: 'Work Location',
-    image: 'image/work.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/WorkLocationApplet',
   ),
 ];
@@ -81,12 +82,12 @@ final List<Applet> settingApplets = [
 final List<Applet> recruiterApplets = [
   Applet(
     text: 'Interview Arrangements',
-    image: 'image/work.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/InterviewArrangementsApplet',
   ),
   Applet(
     text: 'Interview List',
-    image: 'image/work.svg',
+    image: 'assets/images/earth-globe.svg',
     uri: 'applet/InterviewListApplet',
   ),
 ];
