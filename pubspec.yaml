@@ -52,6 +52,10 @@ flutter:
     - assets/images/survey.svg
     - assets/images/transfer.svg
     - assets/images/work.svg
+    - assets/images/job.svg
+    - assets/images/curriculum.svg
+    - assets/images/resume.svg
+    - assets/images/rating.svg
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

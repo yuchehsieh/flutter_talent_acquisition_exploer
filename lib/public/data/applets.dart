@@ -112,13 +112,25 @@ final List<Applet> settingApplets = [
 
 final List<Applet> recruiterApplets = [
   Applet(
+    text: 'Requisition Management',
+    image: 'assets/images/job.svg',
+    uri: 'applet/RequisitionManagementApplet',
+  ),
+  Applet(
+    text: 'New Applicants',
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/NewApplicantsApplet',
+  ),
+  Applet(
     text: 'Interview Arrangements',
-    image: 'assets/images/earth-globe.svg',
-    uri: 'applet/InterviewArrangementsApplet',
+    icon: Icons.calendar_today,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/InterviewArrangementApplet',
   ),
   Applet(
     text: 'Interview List',
-    image: 'assets/images/earth-globe.svg',
+    icon: Icons.list,
+    image: 'assets/images/curriculum.svg',
     uri: 'applet/InterviewListApplet',
   ),
 ];
