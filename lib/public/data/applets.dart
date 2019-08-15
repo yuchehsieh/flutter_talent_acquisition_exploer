@@ -133,4 +133,83 @@ final List<Applet> recruiterApplets = [
     image: 'assets/images/curriculum.svg',
     uri: 'applet/InterviewListApplet',
   ),
+  Applet(
+    text: 'HR Interview Appraisal',
+    icon: Icons.developer_board,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/InterviewAppraisalApplet',
+  ),
+  Applet(
+    text: 'Salary Proposal',
+    icon: Icons.attach_money,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/SalaryProposalApplet',
+  ),
+  Applet(
+    text: 'Onboard List',
+    icon: Icons.list,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/OnboardingListApplet',
+  ),
+  Applet(
+    text: 'Candidate Management',
+    image: 'assets/images/resume.svg',
+    uri: 'applet/CandidateManagementApplet',
+  ),
+  Applet(
+    text: 'Unsuccessful Applicant',
+    icon: Icons.delete_forever,
+    image: 'assets/images/resume.svg',
+    uri: 'applet/UnsuccessfulApplicantApplet',
+  ),
+  Applet(
+    text: 'Talent Marketing',
+    icon: Icons.smartphone,
+    image: 'assets/images/resume.svg',
+    uri: 'applet/TalentMarketingApplet',
+  ),
+  Applet(
+    text: 'Upload Resume',
+    icon: Icons.file_upload,
+    image: 'assets/images/resume.svg',
+    uri: 'applet/UploadResumeApplet',
+  ),
+  Applet(
+    text: 'Report Export',
+    icon: Icons.flip_to_front,
+    image: 'assets/images/resume.svg',
+    uri: 'applet/ReportExportApplet',
+  ),
+];
+
+final List<Applet> hiringManegerApplets = [
+  Applet(
+    text: 'Resume Review',
+    image: 'assets/images/rating.svg',
+    uri: 'applet/ResumeReviewApplet',
+  ),
+  Applet(
+    text: 'Interview Appraisal',
+    icon: Icons.developer_board,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet/ManagerInterviewAppraisalApplet',
+  ),
+  Applet(
+    text: 'Onboard List',
+    icon: Icons.list,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet//ManagerOnboardListApplet',
+  ),
+  Applet(
+    text: 'Candidate Search',
+    icon: Icons.zoom_in,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet//CandidateSearchApplet',
+  ),
+  Applet(
+    text: 'My Favorites',
+    icon: Icons.star,
+    image: 'assets/images/curriculum.svg',
+    uri: 'applet//MyFavoriteApplet',
+  ),
 ];

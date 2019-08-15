@@ -20,6 +20,7 @@ class _MyDrawerState extends State<MyDrawer> {
   List<Applet> _authorizationApplets = authorizationApplets;
   List<Applet> _settingApplets = settingApplets;
   List<Applet> _recruiterApplets = recruiterApplets;
+  List<Applet> _hiringManagerApplets = hiringManegerApplets;
 
   _toggleCollpased(int blockIndex) {
     if (_expandedState == ExpandedState.Expanded) {
@@ -79,6 +80,14 @@ class _MyDrawerState extends State<MyDrawer> {
               blockTitle: 'Recruiter',
               applets: _recruiterApplets,
               onBlockPressed: () => _toggleCollpased(2),
+              currentExpandedIndex: _currentExpandedIndex,
+              expandedState: _expandedState,
+            ),
+            DrawerBlock(
+              blockIndex: 3,
+              blockTitle: 'Hiring Manager',
+              applets: _hiringManagerApplets,
+              onBlockPressed: () => _toggleCollpased(3),
               currentExpandedIndex: _currentExpandedIndex,
               expandedState: _expandedState,
             ),
@@ -162,8 +171,6 @@ class _DrawerBlockState extends State<DrawerBlock>
   Widget build(BuildContext context) {
     final bool isExpanded = widget.expandedState == ExpandedState.Expanded &&
         widget.blockIndex == widget.currentExpandedIndex;
-
-    print(_calVerticalNum());
 
     return Card(
       child: Column(
