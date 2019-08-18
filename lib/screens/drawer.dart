@@ -200,25 +200,33 @@ class _DrawerBlockState extends State<DrawerBlock>
                   )
                 : null,
           ),
-          AnimatedContainer(
-            height: isExpanded
-                ? _calVerticalNum() == 1.0
-                    ? _calVerticalNum() * 110 + 10
-                    : _calVerticalNum() * 110
-                : 0,
-            duration: Duration(milliseconds: 300),
-            child: GridView(
-              padding: EdgeInsets.only(top: 10),
-              // shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 3 / 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+          SingleChildScrollView(
+            child: AnimatedContainer(
+              height: isExpanded
+                  ? _calVerticalNum() > 3.0 ? 300 : _calVerticalNum() * 120
+                  : 0,
+              padding: EdgeInsets.only(top: 10, bottom: 10),
+//              height: isExpanded
+//                  ? _calVerticalNum() == 1.0
+//                      ? _calVerticalNum() * 110 + 10
+//                      : _calVerticalNum() * 110
+//                  : 0,
+              duration: Duration(milliseconds: 300),
+              child: GridView(
+                padding: EdgeInsets.only(top: 10),
+                // shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+//                itemBuilder: (ctx, index) => BlockItems(widget.applets[index]),
+//                itemCount: widget.applets.length,
+                children: widget.applets.map((applet) {
+                  return BlockItems(applet);
+                }).toList(),
               ),
-              children: widget.applets.map((applet) {
-                return BlockItems(applet);
-              }).toList(),
             ),
           ),
         ],
@@ -229,6 +237,7 @@ class _DrawerBlockState extends State<DrawerBlock>
 
 class BlockItems extends StatelessWidget {
   final Applet applet;
+
   BlockItems(this.applet);
 
   void onTapHandler(BuildContext context) {
