@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:talent_acquisition_exploer/models/applet.dart';
+
 import '../public/data/applets.dart';
 
 enum ExpandedState { Expanded, Collapsed }

@@ -41,21 +41,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/earth-globe.svg
-    - assets/images/teamwork.svg
-    - assets/images/connector.svg
-    - assets/images/meeting-room.svg
-    - assets/images/portfolio.svg
-    - assets/images/skills.svg
-    - assets/images/student.svg
-    - assets/images/subject.svg
-    - assets/images/survey.svg
-    - assets/images/transfer.svg
-    - assets/images/work.svg
-    - assets/images/job.svg
-    - assets/images/curriculum.svg
-    - assets/images/resume.svg
-    - assets/images/rating.svg
+    - assets/images/
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
